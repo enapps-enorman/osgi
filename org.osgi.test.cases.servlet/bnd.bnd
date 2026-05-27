@@ -39,8 +39,19 @@ Export-Package: ${p}.junit.mock
 	org.apache.httpcomponents.httpclient;version=4.5.3
 
 -runbundles = \
+    slf4j.api; version=latest, \
+    slf4j.simple; version=latest, \
+    org.objectweb.asm.tree.analysis; version=latest, \
+    org.objectweb.asm.commons; version=latest, \
+    org.objectweb.asm.tree; version=latest, \
+    org.objectweb.asm.util; version=latest, \
+    org.objectweb.asm; version=latest, \
+    org.apache.aries.spifly.dynamic.bundle; version=latest, \
     org.osgi.util.function;version=latest, \
     org.osgi.impl.service.servlet;version=latest
+# These two are needed for jetty 5.2.2 but not for 5.2.3-SNAPSHOT
+#    org.apache.commons.commons-fileupload; version=latest, \
+#    org.apache.commons.commons-io; version=latest, \
 
 -runproperties = ${runproperties}, \
 	org.apache.felix.http.host=127.0.0.1, \
